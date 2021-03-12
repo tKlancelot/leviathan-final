@@ -1,0 +1,94 @@
+@media (min-width:750px) and (max-width: 1040px) and (orientation: landscape) {
+    .navbar{
+        // background:red;
+    }
+
+    .jumbo-frame{
+        width:80%!important;
+        h1{
+            font-size:1.32rem!important;
+        }
+        h2{
+            font-size:1.18rem!important;
+        }
+    }
+
+    .centerFrame{
+        height:52px;
+    }
+    #main section:first-child .panneauGauche .jumbo-frame .option-panel{
+        margin:unset;
+    }
+
+    #main section:first-child{
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 16vh;
+    }
+
+    #main section:first-child .panneauDroit .switch-frame{
+        max-height: unset;
+    }
+
+    .bigCircle{
+        width:300px!important;
+        height:300px;
+    }
+    
+    .smallCircle{
+        width:240px!important;
+        height:240px;
+    }
+    #main #circleShow{
+        margin-top:0;
+        margin-bottom:0;
+        height: 100%;
+    }
+    .section-legend .zoneLegend{
+        border-top:unset;
+        width:60vw;
+    }
+    footer{
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 14vh;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .case-droppable, .draggable, .zone-selectable .base{
+        width:36px;
+        height:36px;
+    }
+
+    .sousPanneau div img{
+        width: 72%;
+    }
+
+    .panneauQualite{
+        height: 50%;
+    }
+
+    .sousPanneau{
+        height:80%;
+    }
+
+    .carreGris, .cercleContact{
+        height:120px;
+        width:120px;
+    }
+
+    .carreGris:first-child{
+        margin:auto auto 2rem;
+    }
+
+    .zone1{
+        width: 100%;
+    }
+
+    .titrePanneau h4, .zone-titre h4{
+        font-size:0.92rem;
+    }
+}

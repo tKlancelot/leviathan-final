@@ -1,0 +1,141 @@
+.navbar{
+    background-color: var(--thema-darkest);
+    height: 6vh;
+    display: flex;
+    // margin: auto;
+    overflow-x: hidden;
+    p{
+        margin-block-end:0rem;
+        margin-block-start:0rem;
+        margin:auto 0rem;
+        font-family: var(--font-gaegu);
+        color:var(--thema-lightest);
+        font-size:1.04rem;
+        letter-spacing: 0.1rem;
+        text-indent: 2rem;
+    }
+    .menu-icon{
+        margin: auto -628px auto auto;
+        display: flex;
+        transition: all 0.5s;
+        transition-timing-function: linear;
+        #burger-icon{
+            width:48px;
+            height:48px;
+            border: unset;
+            background:unset;
+            background-image: url("../assets/icons/svg-burger.svg");
+            background-position: center;
+            transition: 0.5s;
+            // animation:burgerAnim 2s infinite linear;
+            &:hover{
+                background-image: url("../assets/icons/svg-burger-hover.svg");
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+.translateNavbar{
+    // border:4px solid red;
+    transform: translateX(-638px);
+}
+
+.burgerToggled{
+    background-image: url("../assets/icons/light-arrow.svg")!important;
+    &:hover{
+        background-image: url("../assets/icons/light-arrow-hover.svg")!important;
+    }
+}
+
+
+.boutonTk{
+    width:112px;
+    height:40px;
+    background:var(--thema-medium);
+    border:1px solid black;
+    margin: auto 8px;
+    color:white;
+    border-radius: 4px;
+    a{
+        color:white;
+        text-decoration: unset;
+        font: size 0.84rem;
+        transition:0.25s;
+        &:hover{
+            color:var(--thema-green);
+        }
+    }
+}
+
+
+.darkNeon{
+    box-shadow:
+    1px 1px 1px 0px inset #000,
+    2px 2px 1px 0px inset #0006,
+    4px 4px 1px 0px inset #0006,
+    6px 6px 1px 0px inset #0002,
+    -1px -1px 1px 0px inset #0006,
+    -2px -2px 1px 0px inset #0006,
+    -4px -4px 1px 0px inset #0006;
+}
+
+.divMenu{
+    position: absolute;
+    top:0;
+    min-height: 100vh;
+    // border:2px solid red;
+    min-width: 100vw;
+    box-sizing: border-box;
+    background-color: #000d;
+    display: flex;   
+    .cadreAbsolu{
+        display: flex;
+        margin:auto;
+        border:1px solid black;
+        background-color:var(--thema-darkest);
+        box-sizing: border-box;
+        flex-direction: column;
+        padding:2rem;
+        a{
+            display: flex;
+            margin:0.5rem 0;
+            justify-content: start;
+            color:var(--thema-lighter);
+            text-decoration: none;
+        }
+    }
+}
+
+.myCross{
+    background:unset;
+    border:unset;
+    height: 48px;
+    width: 48px;
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-image:url('../assets/icons/cross.svg');
+    position: absolute;
+    right:0 ;
+    top:0;
+    opacity: 0.76;
+}
+
+#anim{
+    background:unset;
+    // background-color:var(--thema-medium);
+    border:unset;
+    width:48px;
+    height: 48px;
+    background-image: url('../assets/icons/icon-switch.svg');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor:pointer;
+    transition:0.5s;
+    &:hover{
+        // background-image: url('../assets/icons/icon-switch-hover.svg');
+    }
+}

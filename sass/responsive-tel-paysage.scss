@@ -1,0 +1,266 @@
+
+
+@media (max-width: 800px) and (orientation: landscape) {
+
+    // navbar
+
+     .navbar{
+        height:6vh;
+     }
+
+
+    #burger-icon{
+        width:22px!important;
+        height:22px!important;
+        background-size: 110%!important;
+        background-repeat: no-repeat!important;
+        background-position: center!important;
+    }
+
+
+     .myBody, .cadre-top, .block-center{
+         min-width: 100vw;
+         max-width: 100vw;
+     }
+
+     .navbar .menu-icon {
+        margin: auto -400px auto auto;
+     }
+
+     .navbar p{
+         font-size:1rem;
+         letter-spacing: 0.01rem;
+     }
+
+     .boutonTk{
+         width:77px;
+         height:24px;
+         font-size:0.54rem;
+         margin:auto 2px;
+     }
+     #anim{
+         margin:0;
+     }
+
+     .translateNavbar{
+        transform: translateX(-400px);
+    }
+
+    .jumbo-frame{
+        display: flex;
+        flex-direction: column;
+        width: 84%!important;
+        h1,h2{
+            // font-size:1rem!important;
+            display: none;
+        }
+        // h2{
+        //     font-size:0.8rem!important;
+        // }
+        .option-panel{
+            margin:initial!important;
+            padding: initial!important;
+        }
+    }
+    #main section:first-child .panneauCentre h3{
+        font-size:1rem;
+    }
+
+
+    #main section:first-child {
+        height: 17vh;
+        background-image: url('../assets/elements/cadre-top.svg');
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .panneauDroit .switch-frame{
+        max-height: unset!important;
+        margin:0.4rem!important;
+        height: 12vh;
+    }
+    #circleShow{
+        height:48vh!important;
+        margin-bottom: unset!important;
+        margin-top: unset!important;
+    }
+
+    .centerFrame{
+        height:44px;
+    }
+    .smallCircle{
+        width:96px!important;
+        height:96px!important;
+    }
+    .bigCircle{
+        width:130px!important;
+        height:130px!important;
+    }
+    #main{
+        // height:66vh;
+    }
+
+    .section-legend .zoneLegend{
+        height:auto;
+        width:65vw;
+        border-top:none!important;
+        p{
+            font-size: 0.76rem!important;
+            margin-block-end: 0rem;
+            margin-block-start: 0.25rem;
+        }
+    }
+    .dotRow{
+        margin:1.2rem auto auto;
+        height: auto;
+    }
+    .littleDot{
+        width:12px!important;
+        height:12px!important;
+    }
+    .copyright p{
+        font-size:0.7rem;
+        margin-block-start: 0.25em;
+        margin-block-end: 0.25em;
+    }
+    footer{
+        background-image: url('../assets/elements/cadre-bottom.svg');
+        background-size:100%;
+        background-repeat: no-repeat;
+    }
+
+
+    //page testimonial
+
+    .cadreTestimonial{
+        width:100vw;
+        .encadre{
+            margin:auto;
+            padding:0.25rem;
+            height:48vh;
+            background-image: url(../assets/elements/legend-strip-2.svg);
+            opacity: 0.8;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: color-burn;
+            background-color: #04c4ff16;
+
+            .paragraphe{
+                padding:0.75rem;
+                font-size:0.62rem;
+                margin-block-start: 0em;
+                margin-block-end: 0em;
+                height:84%;
+                background:unset;
+            }
+            .auteur{
+                font-size:0.8rem;
+            }
+        }
+    }
+
+    .leftPanel #btnLeft, .rightPanel #btnRight{
+        background-size: 64%!important;
+        background-repeat: no-repeat!important;
+        background-position: center!important;
+    }
+
+    .carreGris{
+        width:80px!important;
+        height:80px!important;
+        .cercleContact{
+            width:60px;
+            height:60px;
+        }
+    }
+    .socle{
+        background-size:64%;
+    }
+
+    .section-formulaire h3{
+        font-size:0.96rem;
+        margin:0.25rem;
+    }
+    
+    .section-input input, .section-input textarea{
+        font-size:0.72rem;
+        padding:0.2rem;
+    }
+
+    .section-formulaire .formulaire-tarik, .tableauCommentaire{
+        margin:1% 4%;
+    }
+    .tableauCommentaire{
+        width: 100%;
+        font-size:0.74rem;
+    }
+    .navbar + p{
+        font-size: 0.76rem!important;
+    }
+
+    .buttonLinkedin, .buttonMail, .buttonDonwloadCv, .buttonTelephone, .buttonGithub{
+        width:32px;
+        height:32px;
+    }
+
+    .modeContact a{
+        margin:0.5rem auto;
+    }
+
+
+    // carte de visite
+
+    .cadre-top .titre-visite{
+        font-size:0.84rem;
+    }
+
+    .zone1{
+        width:100%;
+    }
+
+    .titrePanneau h4, .zone-titre h4{
+        font-size:0.58rem;
+        // display: none;
+        color:var(--thema-lightest);
+    }
+
+    .draggable,.zone-selectable .base {
+        width:28px;
+        height:28px;
+        font-size:0.46rem;
+    }
+    
+    .case-droppable{
+        width:24px;
+        height:24px;
+    }
+    .zone-selectable .base{
+        margin:auto 0.8rem;
+    }
+
+    .sousPanneau div img{
+        width:72%;
+    }
+    .panneauQualite{
+        height:56%;
+    }
+
+    .dragLegend{
+        margin:auto;
+    }
+
+    .dragLegend .divText{
+        font-size:0.48rem;
+        width:40vw;
+    }
+
+    footer{
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: 20vh;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+}

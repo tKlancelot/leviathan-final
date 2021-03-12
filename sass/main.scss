@@ -1,0 +1,280 @@
+#main{
+    height:74vh;
+    // background-position: 0px 0px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    section:first-child{
+        height:20vh;
+        background-image:url('../assets/elements/cadre-top.svg');
+        background-size: 100%;
+        display: flex;
+        background-repeat: no-repeat;
+        // border:1px solid red;
+        .panneauGauche{
+            // border:2px solid greenyellow;
+            display: flex;
+            flex-basis: 17.5%;
+            flex-direction: column;
+            .jumbo-frame{
+                margin:1rem auto auto;
+                width:80%;  
+                h1,h2{
+                    font-family: var(--dm-sans);
+                    text-transform: uppercase;
+                    font-weight: normal;
+                    margin-block-start: 0;
+                    margin-block-end: 0;
+                }
+                h1{
+                    color:#fff3;
+                    font-size: 28px;
+                    letter-spacing: 0.12rem;
+                }
+                h2{
+                    color:#eee8;
+                    font-size: 24px;
+                    letter-spacing: 0.04rem;
+                }
+                .option-panel{
+                    margin:1rem auto 0rem;
+                    padding:1rem 0rem;
+                    .boutonTk{
+                        margin:unset;
+                        margin-right:1rem!important;
+                    }
+                }
+            }
+        }
+        .panneauCentre{
+            display: flex;
+            flex-basis: 65%;
+            h3{
+                color:#fff8;
+                font-size: 22px;
+                font-family: var(--dm-sans);
+                font-weight: normal;
+                letter-spacing: 0.08rem;
+                margin: auto auto 3.2rem;
+                text-transform: uppercase;
+            }
+        }
+
+        .panneauDroit{
+            display: flex;
+            flex-basis: 17.5%;
+            justify-content: flex-end;
+            .switch-frame{
+                // border:1px solid #0008;
+                // max-height: 28%;
+                display: flex;
+                margin:1rem;
+                div{
+                    display: flex;
+                    margin: auto;
+                    color:white;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    #circleShow{
+        // border:1px solid red;
+        // border-radius: 50%/30px;
+        height:42vh;
+        margin-bottom:1rem;
+    }
+}
+
+.leftPanel, .rightPanel{
+    width:40px;
+}
+
+// carousel bouton
+
+.switch-frame{
+    // background-color:var(--thema-darker);
+    border-radius:12px;
+    // box-shadow: 
+    // 1px 1px 1px inset #000c,2px 2px 2px inset #000a,4px 4px 4px inset #0004,
+    // -1px -1px 1px inset #000c,-2px -2px 2px inset #000a,-4px -4px 4px inset #0004;
+    div{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin: auto;
+    }
+}
+
+.rightPanel button, .leftPanel button{
+    background-repeat: no-repeat;
+    background-position: center;
+    background:unset;
+    border:unset;
+    height:32px;
+    width:32px;
+    transition:0.5s;
+}
+
+.rightPanel button{
+    background-image:url('../assets/icons/grey-right-arrow.svg');
+    &:hover{
+        background-image:url('../assets/icons/grey-right-arrow-hover.svg');
+    }
+}
+
+.leftPanel button{
+    background-image:url('../assets/icons/grey-left-arrow.svg');
+    &:hover{
+        background-image:url('../assets/icons/grey-left-arrow-hover.svg');
+    }
+}
+
+.centerFrame{
+    width:64px;
+    height:64px;
+    flex-basis: unset!important;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.5s ease-out all;
+}
+
+#circleShow{
+    display: flex;
+    // flex-direction: column;
+    div{
+        flex-basis: 33.33%;
+        align-self: center;
+        text-align: center;
+        div{
+            display: flex;
+            margin: auto;
+            border-radius: 50%;
+            // border:2px solid silver;
+        }
+    }
+
+}
+
+.smallCircle{
+    width: 256px!important;
+    height: 256px;
+    background-image:url('../assets/elements/pattern-logo.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #04C4FF08;
+    background-blend-mode: soft-light;
+}
+
+.bigCircle{
+    // border:2px solid silver;
+    background-image:url('../assets/elements/pattern-logo.svg');
+    background-size: 20%;
+    background-color: #04C4FF08;
+    background-blend-mode: soft-light;
+    width: 380px!important;
+    height: 380px;
+}
+
+.section-legend{
+    display: flex;
+    margin: auto;
+    height:12vh;   
+    // border:1px solid red;
+    // background-position: center;
+    .zoneLegend{
+        background-size: cover;
+        width:30vw;
+        height: 62px;
+        background-repeat: no-repeat;
+        // background-image: url('../assets/elements/border-legend.svg');
+        border-top:1px solid silver;
+        justify-content: center;
+        display: flex;
+        margin: auto;
+        align-items: center;
+        p{
+            font-family: var(--font-gaegu);
+            font-size:1.2rem;
+            color:var(--thema-lighter);
+            text-align:center;
+            letter-spacing: 0.06rem;
+        }
+
+    }
+}
+
+
+.cadreTestimonial{
+    margin:auto;
+    width:65vw;
+    display: flex;
+    // border:1px solid silver;
+    justify-content: space-evenly;
+    .encadre{
+        margin: auto 2.8rem;
+        flex-basis: 33.33%;
+        border:2px dashed var(--thema-light);
+        height:40vh;
+        display: flex;
+        flex-direction: column;
+        padding:1rem;
+        .paragraphe{
+            justify-content: center;
+            text-align: justify;
+            padding:1.2em;
+            // border:1px solid var(--thema-green);
+            border-radius:4px;
+            height:64%;
+            color:var(--thema-lightest);
+            font-size:0.92rem;
+            text-indent: 1.4rem;
+            letter-spacing: 0.04rem;
+            align-items: center;
+            background-image:url('../assets/elements/legend-strip-2.svg');
+            opacity: 0.8;
+            
+            background-position:center;
+            background-repeat: no-repeat;
+            background-blend-mode: color-burn;
+            background-color: #04c4ff16;
+        }
+        .auteur{
+            color:var(--thema-light);
+            font-family: var(--dm-sans);
+            font-style: italic;
+            justify-content:flex-end;
+            display: flex;
+            margin-right:2rem;
+            font-size:1.18rem;
+        }
+    }
+}
+
+
+.fadeIn{
+    animation: fadeIn linear 1s;
+}
+
+.flipMe{
+    animation: flipMe linear 0.4s;
+}
+
+
+@keyframes flipMe{
+    from{
+        transform: scale(0.6) translate(0px,-100px);
+    }
+    to{
+        transform: translate(0px,0px);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
