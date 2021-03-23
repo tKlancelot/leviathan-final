@@ -13,10 +13,10 @@
         </div></div>
     </div>
     
-    <div class="panneauMilieu">
+    <div class="panneauMilieu darkNeon">
         <div class="zone1">
             <section>
-                <div class="zone-titre">
+                <div class="zone-titre darkNeon">
                     <h4>front-end</h4>
                 </div>
                 <div id="front-end" class="zone-droppable">
@@ -32,7 +32,7 @@
                 </div>
             </section>
             <section>
-                <div class="zone-titre">
+                <div class="zone-titre darkNeon">
                     <h4>back-end</h4>
                 </div>
                 <div id="back-end" class="zone-droppable-2">
@@ -43,7 +43,7 @@
                 </div>
             </section>
             <section>
-                <div class="zone-titre">
+                <div class="zone-titre darkNeon">
                     <h4>libraries, framework, cms</h4>
                 </div>
                 <div id="libraries" class="zone-droppable">
@@ -110,17 +110,11 @@
                 <h4>qualités</h4>
             </div>
             <div class="sousPanneau">
-                <div id="curiosity" class="cadreImage">
-                    <img src="./assets/icons/logo-curiosite.svg" alt="">
-                </div>
-                <div id="creative" class="cadreImage">
-                    <img src="./assets/icons/logo-creatif.svg" alt="">
-                </div>
-                <div id="dedicated" class="cadreImage">
-                    <img src="./assets/icons/logo-implication.svg" alt="">
-                </div>
-                <div id="rigorous"class="cadreImage">
-                    <img src="./assets/icons/logo-rigueur.svg" alt="">
+                <div id="qualities" class="zone-droppable-3">
+                    <div id="creative" class="case-droppable cadreImage"></div>
+                    <div id="rigueur" class="case-droppable cadreImage"></div>
+                    <div id="implication" class="case-droppable cadreImage"></div>
+                    <div id="curiosite" class="case-droppable cadreImage"></div>
                 </div>
             </div>
         </div>

@@ -337,14 +337,14 @@ function checkingThings(caseMax){
 
 // fonctionnalité supp
 
-let allPictures = document.querySelectorAll('.cadreImage img');
-let legendeArray = ["curieux","créatif","impliqué","rigoureux"];
+let allPictures = document.querySelectorAll('.cadreImage');
+let legendeArray = ["créatif","rigoureux","impliqué","curieux"];
 
 function displayLegend(){
     for (let i = 0; i < allPictures.length;i++){
         allPictures[i].addEventListener("mouseover",function(){
             divText.textContent = legendeArray[i];
-            allPictures[i].style.filter = "hue-rotate(160deg)";
+            // allPictures[i].style.filter = "hue-rotate(160deg)";
             dragLegend.append(divText);
         })
         allPictures[i].addEventListener("mouseout",function(){
@@ -356,7 +356,30 @@ function displayLegend(){
 
 displayLegend();
 
+let cadreTop = document.querySelector('.cadre-top');
+let compteur = document.createElement("div");
+let paraCompteur = document.createElement("p");
+compteur.classList.add('compteur','boutonTk','darkNeon');  
+compteur.append(paraCompteur);
+cadreTop.append(compteur);
+let c = 120;
 
+function showTime(){
+    let thisInt = setInterval(function(){
+        // let myTime = new Date(); 
+        // var s = myTime.getSeconds();
+        if(c > 0){
+            paraCompteur.textContent = c;
+            c--;
+        }
+        else{
+            alert('vous n\'avez pas terminé dans le temps imparti !');
+            c = "";
+            clearInterval(thisInt);
+        } 
+    },1000);
+}
+showTime();
 
 // var isDown = false;
 

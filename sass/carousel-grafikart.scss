@@ -1,0 +1,138 @@
+
+.cadreCarousel{
+    // border:1px solid aqua;
+    height:94vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.pict{
+    display: flex;
+    transition: transform 0.3s;
+    img{
+        margin: auto;
+        width:60%;      
+    }
+}
+
+#carousel1, #carousel2,#carousel3{
+    margin: auto;
+    display: flex;
+    box-sizing: border-box;
+}
+
+#carousel1{
+    // border:1px solid red;
+    .pict{
+        // border:1px solid orange;
+        img{
+            height: 30vh!important;
+        }
+    }
+}
+
+#carousel2{
+    .pict{
+        img{
+            height: 36vh;
+        }
+    }
+}
+
+.carousel{
+    position:relative;
+    overflow-x: hidden;
+    margin: auto;
+}
+
+.carousel__container{
+    transition:transform 1s ease;
+    transform:translate3d(0,0,0);
+    height:42vh;
+    // border:1px solid red;
+    display: flex;
+}
+
+.carousel__container::after{
+    content:"";
+    clear: both;
+    display: table;
+}
+
+.carousel__item{
+    float: left;
+    overflow:visible;
+    margin:auto;
+    .pict img{
+        transition: 0.25s transform ease-in;
+        &:hover{
+            transform: translate(0px,-10px) scale(1.1);
+        }
+    }
+}
+
+.carousel__next, .carousel__prev{
+    position: absolute;
+    width:40px;
+    height: 40px;
+    background-color: white;
+    background:url('../assets/icons/icon-next.svg') center center no-repeat;
+    top:50%;
+    margin-top:-20px;
+    right:0px;
+    cursor: pointer;
+    background-size:80%;
+    transition:0.4s;
+    transition-property: opacity,transform;
+}
+
+.carousel__next:hover,.carousel__prev:hover{
+    transform: scale(1.2);
+}
+
+.carousel__prev{
+    background:url('../assets/icons/icon-prev.svg') center center no-repeat;
+    background-size:80%;
+    right:auto;
+    left:20px;
+}
+
+.carousel__pagination{
+    // position: absolute;
+    /*center element en absolute - technique*/
+    // transform: translateX(-50%);
+    display: none;
+    justify-content: center;
+    justify-content: space-evenly;
+    // width: 20vw;
+    margin:auto 40%;
+    // border:1px solid red;
+}
+.carousel__pagination__button{
+    background-color:var(--thema-light);
+    width:12px;
+    height:12px;
+    border-radius:2px;
+    display: flex;
+    margin:0px 4px;
+    transition: transform 0.3s;
+
+    cursor: pointer;
+}
+
+.carousel__pagination__button__active, .carousel__pagination__button:hover{
+    transform:scale(1.4);
+    background-color:var(--thema-lightest);
+}
+
+.hidden{
+    opacity: 0;
+}
+
+
+@media screen and (min-width:800px){
+    .carousel__pagination{
+        display:flex;
+    }
+}

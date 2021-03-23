@@ -1,0 +1,64 @@
+.cadreTechnique{
+    // border:1px solid red;
+    display: flex;
+    height: 94vh;
+    box-sizing: border-box;
+    flex:auto;
+}
+
+.asidePanel{
+    // border:1px solid white;
+    flex-basis: 25%;
+    #menuGrafik{
+        background-color:var(--thema-dark);
+        // border:1px solid blue;
+        // border:1px solid red;
+        margin:2.4rem;
+        height:92%;
+        h4{
+            font-size: 1rem;
+            color: #f0f0f0;
+            text-transform: uppercase;
+            font-family: var(--font-gaegu);
+            margin: auto;
+            box-sizing: border-box;
+            letter-spacing: 0.18rem;
+            padding: 4px;
+            border: 4px solid var(--thema-darkest);
+            border-radius: 4px;
+            background-image: url("../assets/elements/texture-dark-blue-cloth.jpg");
+            background-blend-mode: luminosity;
+            background-color: #04c4ffc4;
+            background-size: cover;
+            text-align: center;
+            width: 100%;
+        }
+        ul{
+            list-style-type: none;
+            padding:0;
+            margin: 0;
+            li{
+                display: flex;
+                box-sizing: border-box;
+                margin: auto 0.3rem;
+                a{
+                    padding:4px;
+                    font-size: 0.92rem;
+                    color:var(--thema-light);
+                    width: 100%;      
+                    text-decoration: none;
+                    transition: 0.3s;          
+                    &:hover{
+                    background-color:#04c4ffc4;
+                    color:var(--thema-darker);
+                }
+                // margin:auto;
+                }
+            }
+        }  
+    }
+}
+.sectionPanel{
+    flex-basis: 75%;
+    // border:1px solid orange;
+}

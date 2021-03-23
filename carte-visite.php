@@ -1,6 +1,6 @@
 <?php 
         $title = "carte de visite";
-        $msg = "what I can do";
+        $msg = "complétez mon arbre de compétence dans le temps imparti";
 ?>
 
 <body class="myBody">

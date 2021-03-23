@@ -1,6 +1,6 @@
 <?php 
         $title = "portfolio de tarik";
-        $msg = "welcome to my portfolio";
+        $msg = "bienvenue sur mon portfolio";
 ?>
 <?php require('head.php'); ?>
 

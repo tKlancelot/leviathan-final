@@ -5,70 +5,33 @@
     display: flex;
     flex-direction: column;
     section:first-child{
-        height:20vh;
-        background-image:url('../assets/elements/cadre-top.svg');
+        height:auto;
         background-size: 100%;
         display: flex;
         background-repeat: no-repeat;
-        // border:1px solid red;
+        flex-wrap: wrap;
+        position: absolute;
+        left:0.75%;
+        align-self: flex-end;
         .panneauGauche{
             // border:2px solid greenyellow;
             display: flex;
-            flex-basis: 17.5%;
+            flex-basis: 25%;
             flex-direction: column;
-            .jumbo-frame{
-                margin:1rem auto auto;
-                width:80%;  
-                h1,h2{
-                    font-family: var(--dm-sans);
-                    text-transform: uppercase;
-                    font-weight: normal;
-                    margin-block-start: 0;
-                    margin-block-end: 0;
-                }
-                h1{
-                    color:#fff3;
-                    font-size: 28px;
-                    letter-spacing: 0.12rem;
-                }
-                h2{
-                    color:#eee8;
-                    font-size: 24px;
-                    letter-spacing: 0.04rem;
-                }
-                .option-panel{
-                    margin:1rem auto 0rem;
-                    padding:1rem 0rem;
-                    .boutonTk{
-                        margin:unset;
-                        margin-right:1rem!important;
-                    }
-                }
-            }
         }
-        .panneauCentre{
-            display: flex;
-            flex-basis: 65%;
-            h3{
-                color:#fff8;
-                font-size: 22px;
-                font-family: var(--dm-sans);
-                font-weight: normal;
-                letter-spacing: 0.08rem;
-                margin: auto auto 3.2rem;
-                text-transform: uppercase;
-            }
-        }
-
         .panneauDroit{
             display: flex;
-            flex-basis: 17.5%;
-            justify-content: flex-end;
+            flex-basis: 100%;
+            justify-content: center;
             .switch-frame{
-                // border:1px solid #0008;
-                // max-height: 28%;
+                background-size: cover;
                 display: flex;
                 margin:1rem;
+                // border:1px solid var(--thema-darker);
+                // background-position: center;
+                // background-image:url('../assets/elements/texture-dark-blue-cloth.jpg');
+                // background-color:#78dfff40;
+                // background-blend-mode: color-dodge;
                 div{
                     display: flex;
                     margin: auto;
@@ -80,48 +43,63 @@
     }
     #circleShow{
         // border:1px solid red;
-        // border-radius: 50%/30px;
-        height:42vh;
-        margin-bottom:1rem;
     }
 }
 
+.panneauCentre{
+    display: flex;
+    flex-basis: 100%;
+    h3{
+        color:#fff8;
+        font-size: 22px;
+        font-family: var(--dm-sans);
+        font-weight: normal;
+        letter-spacing: 0.08rem;
+        margin: auto;
+        text-transform: uppercase;
+    }
+}
+
+
+#circleCenter{
+    margin: 10rem 0 0;
+}
+
 .leftPanel, .rightPanel{
-    width:40px;
+    // width:40px;
 }
 
 // carousel bouton
 
 .switch-frame{
     // background-color:var(--thema-darker);
-    border-radius:12px;
-    // box-shadow: 
-    // 1px 1px 1px inset #000c,2px 2px 2px inset #000a,4px 4px 4px inset #0004,
-    // -1px -1px 1px inset #000c,-2px -2px 2px inset #000a,-4px -4px 4px inset #0004;
-    div{
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        margin: auto;
-    }
-}
-
-.rightPanel button, .leftPanel button{
-    background-repeat: no-repeat;
-    background-position: center;
-    background:unset;
-    border:unset;
-    height:32px;
-    width:32px;
-    transition:0.5s;
+    border-radius:6px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
 }
 
 .rightPanel button{
-    background-image:url('../assets/icons/grey-right-arrow.svg');
+    background:unset;
+    border:unset;
+    width:64px;
+    height: 32px;
+    margin:auto;
+    cursor: pointer;
+    background-image:url('../assets/icons/icon-testimonial.svg');
+    background-size:42%;
+    background-position:center;
+    background-repeat: no-repeat;
+    opacity: 0.36;
+    transition:0.2s;
     &:hover{
-        background-image:url('../assets/icons/grey-right-arrow-hover.svg');
+        opacity:0.72;
+        background-color:unset;
     }
 }
+
+
 
 .leftPanel button{
     background-image:url('../assets/icons/grey-left-arrow.svg');
@@ -144,8 +122,9 @@
     // flex-direction: column;
     div{
         flex-basis: 33.33%;
-        align-self: center;
+        // align-self: bottom;
         text-align: center;
+        margin: auto;
         div{
             display: flex;
             margin: auto;
@@ -156,24 +135,48 @@
 
 }
 
+
+#frameCircle{
+    width:448px;
+    height:448px;
+    // display:flex;
+    // border:32px dashed var(--thema-light);
+    background-image: url('../assets/spheres/frame-circle.svg');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    transition: 0.5s;
+    &:hover{
+        background-image: url('../assets/spheres/frame-circle-hover.svg');
+    }
+    &:hover .bigCircle{
+        box-shadow: 0px 0px 1px white inset,0px 0px 2px white inset,0px 0px 2px white inset,0px 0px 2px white inset;
+        background-color: #04C4FF16;
+        background-blend-mode: soft-light;
+        cursor: pointer;
+    }
+}
+
 .smallCircle{
     width: 256px!important;
     height: 256px;
     background-image:url('../assets/elements/pattern-logo.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #04C4FF08;
+    // background-color: #04C4FF08;
     background-blend-mode: soft-light;
 }
 
 .bigCircle{
     // border:2px solid silver;
     background-image:url('../assets/elements/pattern-logo.svg');
-    background-size: 20%;
-    background-color: #04C4FF08;
-    background-blend-mode: soft-light;
     width: 380px!important;
     height: 380px;
+    transition: 0.5s;
+    background-size: 30%!important;
+    background-repeat: repeat!important;
+    // position: absolute;
+    // transform: rotate(-45deg);
 }
 
 .section-legend{
@@ -188,14 +191,14 @@
         height: 62px;
         background-repeat: no-repeat;
         // background-image: url('../assets/elements/border-legend.svg');
-        border-top:1px solid silver;
+        border-bottom:1px solid silver;
         justify-content: center;
         display: flex;
         margin: auto;
         align-items: center;
         p{
-            font-family: var(--font-gaegu);
-            font-size:1.2rem;
+            font-family: var(--dm-sans);
+            font-size:1rem;
             color:var(--thema-lighter);
             text-align:center;
             letter-spacing: 0.06rem;
@@ -207,37 +210,39 @@
 
 .cadreTestimonial{
     margin:auto;
-    width:65vw;
+    width: 80vw;
     display: flex;
     // border:1px solid silver;
     justify-content: space-evenly;
     .encadre{
         margin: auto 2.8rem;
         flex-basis: 33.33%;
-        border:2px dashed var(--thema-light);
-        height:40vh;
+        border:1px solid var(--thema-medium);
+        border-radius:4px;
+        height:477px;
         display: flex;
         flex-direction: column;
         padding:1rem;
+        justify-content: center;
         .paragraphe{
             justify-content: center;
             text-align: justify;
-            padding:1.2em;
-            // border:1px solid var(--thema-green);
+            padding:2em;
+            border:1px solid var(--thema-darker);
             border-radius:4px;
-            height:64%;
+            height:50%;
             color:var(--thema-lightest);
-            font-size:0.92rem;
+            font-size:0.96rem;
             text-indent: 1.4rem;
             letter-spacing: 0.04rem;
-            align-items: center;
             background-image:url('../assets/elements/legend-strip-2.svg');
             opacity: 0.8;
-            
+            // flex: inherit;
             background-position:center;
             background-repeat: no-repeat;
-            background-blend-mode: color-burn;
-            background-color: #04c4ff16;
+            background-blend-mode: lighten;
+            background-color: #04c4ff32;
+            // background-color: var(--thema-dark);
         }
         .auteur{
             color:var(--thema-light);
@@ -246,6 +251,7 @@
             justify-content:flex-end;
             display: flex;
             margin-right:2rem;
+            margin-top:1.6rem;
             font-size:1.18rem;
         }
     }
@@ -278,3 +284,4 @@
         opacity: 1;
     }
 }
+

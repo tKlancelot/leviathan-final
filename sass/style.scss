@@ -1,5 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Gaegu&family=Gentium+Basic:ital,wght@1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Denk+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Racing+Sans+One&family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
+
+*{
+    // cursor: crosshair;
+    // cursor:url('../assets/cursor-leviathan.cur'), auto;
+    margin:0;
+    padding:0;
+}
+
+@font-face {
+    font-family: WellFont;
+    src: local("WellFont"),
+         local("WellFont"),
+         url("../assets/fonts/wellfont/Wellfont.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: SandBeach;
+    src: local("SandBeach"),
+         local("SandBeach"),
+         url("../assets/fonts/sandbeach/Sand\ Beach\ Demo.ttf");
+    font-weight: bold;
+}
+
 
 
 body{
@@ -11,14 +40,18 @@ body{
     --thema-darkest: #1C1C1C;
     --thema-darkest-transp: #222;
     --thema-darker: #282828;
-    --thema-dark: #343434;
+    --thema-dark: #303030;
     --thema-medium: #505050;
     --thema-light: #8C8C8C;
     --thema-lighter: #b0b0b0;
     --thema-lightest: #EEEEEE;
-    --font-gaegu :'Gaegu', cursive;
+    // --font-gaegu :'Gaegu', cursive;
+    --font-gaegu :'Denk One', cursive;
+    // --font-gentium:'Racing Sans One', cursive;
     --font-gentium:'Gentium Basic', serif;
     --dm-sans:'DM Sans', sans-serif;
+    --lato:'Lato', sans-serif;
+    --font-bubbleGum:'Bubblegum Sans', cursive;;
     --thema-green:#04c4ff;
 }
 
@@ -28,17 +61,62 @@ body{
 @import "contact.scss";
 @import "carte-visite.scss";
 @import "parcours.scss";
-@import "responsive-tel-paysage.scss";
+@import "slideshow.scss";
+@import "artwork.scss";
+@import "carousel-grafikart.scss";
+@import "fenetre-modale.scss";
+@import "techniques.scss";
+@import "section-3d.scss";
 @import "responsive-tel-portrait.scss";
-@import "responsive-tablette-paysage.scss";
 
-p, ul, li, a, button{
+p, ul, li, a, button,h4{
     font-family: var(--dm-sans);
 }
 
 .myBody{
     min-height: 100%;
     background-color: #282828;
+    // background-image:url('../assets/elements/texture-dark.jpg');
     max-height: 100%;
 }
+
+.flex{
+    display: flex;
+    flex:auto;
+    height: 94vh;
+}
+
+.align-self{
+    margin:auto;
+    padding:4px;
+    border:1px solid var(--thema-light);
+    border-radius: 4px;
+    // align-self: center;
+}
+
+
+.error, .valid{
+    color:#f38;
+    font-weight: normal;
+    font-size:0.9rem;
+    margin:0;
+    padding-top:6px;
+    padding-bottom:6px;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    text-indent:4px;
+}
+
+.valid{
+    color:#2f6;
+}
+
+.section-error{
+    border:1px solid var(--thema-medium);
+    border-radius: 4px;
+    display:flex;
+    flex-direction: column;
+    margin:0.5rem;
+}
+
 

@@ -1,5 +1,5 @@
 footer{
-    background-image:url('../assets/elements/rectangle-footer.svg');
+    // background-image:url('../assets/elements/cadre-bottom.svg');
     height: 20vh;
     background-size: cover;
     display: flex;
@@ -25,18 +25,22 @@ footer{
             display: flex;
             margin: auto;
             // border:2px solid greenyellow;
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             border-radius: 24px;
-            background-color: var(--thema-medium);
+            background-color: var(--thema-light);
+            opacity: 0.6;
+            transition:0.5s width height;
         }
         .active-dot{
             // background-color:#C4FF00c4;
             background-color:var(--thema-green);
-            width: 18px;
-            height: 18px;
-            border:1px solid black;
-            box-shadow: 0px 0px 1px inset #000c,0px 0px 2px inset #000a,0px 0px 4px inset #000a,0px 0px 8px inset #000a;
+            // background-color:red;
+            opacity: .8;
+            width: 16px;
+            height: 16px;
+            // border:1px solid black;
+            box-shadow: 0px 0px 1px inset #000c,0px 0px 2px inset #000a,0px 0px 4px inset #000a;
         }
     }
 }
@@ -46,7 +50,7 @@ footer{
     display: flex;
     // border:1px solid red;
     position: fixed;
-    bottom:0;
+    bottom: 1rem;
     width: 100%;
     box-sizing: border-box;
      p{

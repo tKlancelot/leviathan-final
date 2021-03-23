@@ -7,6 +7,7 @@
     opacity: 0.5;
     font-size: 1.4rem;
     justify-content: center;
+    // margin: auto auto 3rem;
     margin: auto;
 }
 
@@ -30,9 +31,6 @@
 }
 
 
-.dragging-effect{
-    // background:transparent;
-}
 
 .bgGreen{
     background:var(--thema-green)!important;
@@ -57,17 +55,24 @@
     width: 80%;
     margin:auto;
     display: flex;
-    // border:1px solid green;
     section{
         width: 100%;
         display: flex;
         flex-direction: column;
         .zone-titre{
             display: flex;
-            width: 100%;
-            justify-content: center;
+            width: 84%;
+            border-radius: 2px;
+            top:-18%;
+            margin:0 auto;
+            justify-content:center;
             position: relative;
-            top:-16%;
+            padding:0.4rem;
+            background-image: url('../assets/elements/texture-dark-blue-cloth.jpg');
+            background-size: cover;
+            background-position:center;
+            background-color:var(--thema-lighter);
+            background-blend-mode: color-burn;
         }
     }
 }
@@ -141,6 +146,13 @@
     flex-basis: 65%;
     display: flex;
     flex-direction: column;
+    background: var(--thema-darkest);
+    border-radius: 6px;
+    margin: auto;
+    height: 100%;
+    background-position:center;
+    background-size: cover;
+    // padding-bottom:2rem;
 
 }
 .block-center-2 .panneauGauche,.block-center-2 .panneauDroit{
@@ -178,11 +190,12 @@
 
 .titrePanneau h4, .zone-titre h4{
     font-family: var(--font-gaegu);
-    color:var(--thema-light);
-    font-size:1.16rem;
+    color:var(--thema-lightest);
+    font-size:1.12rem;
     font-weight: normal;
-    letter-spacing: 0.04rem;
+    letter-spacing: 0.06rem;
     text-transform: uppercase;
+    opacity: 0.9;
     margin-block-start: 0em;
     margin-block-end: 0em;
 }
@@ -197,7 +210,7 @@
     height: 64%;
     margin:auto;
     position: relative;
-    background-color:var(--thema-darkest-transp);
+    // background-color:var(--thema-darkest-transp);
     display: flex;
     flex-direction: column;
 }
@@ -209,15 +222,74 @@
     margin: auto;
     height: 100%;
     width: 100%;
-    div{
-        justify-content: center;
-        align-items: center;
-        width: 50%;
+    #qualities{
+        // width: 50%;
+        // justify-content: center;
+        // align-items: center;
+        // flex-basis: 50%;
         display: flex;
+        // flex-direction: column;
+        border:2px solid var(--thema-medium);
+        // background-color: var(--thema-dark);
+        border-radius: 6px;
         margin: auto;
-        img{
-            margin: auto;
+        width: 180px;
+        height: 180px;
+        flex-wrap: wrap;
+        div{
+            display: flex;
+            // border:2px solid var(--thema-darker);
+            border-radius: 8px;
+            border:1px solid transparent;
+            width: 60px;
+            height: 60px;
+            transition:all 0.25s;
+            background-position: center;
+            background-size: cover;
+            &:hover{
+                // border-color:var(--thema-green);
+            }
         }
+        #creative{
+            background-image: url('../assets/icons/logo-creatif.svg');
+            &:hover{
+                background-image: url('../assets/icons/logo-creatif-hover.svg');
+            }
+        }
+        #rigueur{
+            background-image: url('../assets/icons/logo-rigueur.svg');
+            &:hover{
+                background-image: url('../assets/icons/logo-rigueur-hover.svg');
+            }
+        }
+        #implication{
+            background-image: url('../assets/icons/logo-implication.svg');
+            &:hover{
+                background-image: url('../assets/icons/logo-implication-hover.svg');
+            }
+        }
+        #curiosite{
+            background-image: url('../assets/icons/logo-curiosite.svg');
+            &:hover{
+                background-image: url('../assets/icons/logo-curiosite-hover.svg');
+            }
+        }
+    }
+}
+
+.compteur{
+    // border:4px solid var(--thema-green);
+    width:48px;
+    height: 48px!important;
+    display: flex;
+    margin-right:1rem;
+    background-color: var(--thema-green);
+    p{
+        margin:auto;
+        font-size:1.2rem;
+        display: flex;
+        font-family: var(--font-gaegu);
+        justify-content: center;
     }
 }
 

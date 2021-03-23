@@ -8,14 +8,17 @@
         margin-block-end:0rem;
         margin-block-start:0rem;
         margin:auto 0rem;
-        font-family: var(--font-gaegu);
+        font-family: var(--dm-sans);
         color:var(--thema-lightest);
-        font-size:1.04rem;
-        letter-spacing: 0.1rem;
-        text-indent: 2rem;
+        font-size: 0.88rem;
+        letter-spacing: 0.12rem;
+        text-indent: 3.2rem;
+        opacity: 0.72;
+        text-transform: uppercase;
+        font-style:normal;
     }
     .menu-icon{
-        margin: auto -628px auto auto;
+        margin: auto -1040px auto auto;
         display: flex;
         transition: all 0.5s;
         transition-timing-function: linear;
@@ -39,7 +42,7 @@
 
 .translateNavbar{
     // border:4px solid red;
-    transform: translateX(-638px);
+    transform: translateX(-1040px);
 }
 
 .burgerToggled{
@@ -51,31 +54,52 @@
 
 
 .boutonTk{
-    width:112px;
-    height:40px;
-    background:var(--thema-medium);
+    // width:96px;
+    // height:36px;
+    height:36px!important;
+    background-color:var(--thema-light);
+    background:url('../assets/elements/texture-dark-blue-cloth.jpg');
+    background-position-x: center;
+    background-size:cover;
+    background-blend-mode: color-burn;
     border:1px solid black;
     margin: auto 8px;
     color:white;
     border-radius: 4px;
+    background-position:16% center; 
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    &:hover{
+        // background:unset;
+        background-color:#d8d8d8;
+        text-shadow: 0px 0px 1px white,0px 0px 1px white,0px 0px 1px white;
+    }
     a{
-        color:white;
+        width:96px;
+        // color:var(--thema-lightest);
+        color:#eee;
         text-decoration: unset;
-        font: size 0.84rem;
+        font-size: 0.88rem;
+        font-family: var(--dm-sans);
+        text-transform: uppercase;
         transition:0.25s;
+        letter-spacing: 0.01rem;
+        padding:4px 20px;
         &:hover{
-            color:var(--thema-green);
+            color:white;
         }
     }
 }
 
+#home{
+    // background-image: url('../assets/icons/icon-home.svg');
+}
 
 .darkNeon{
     box-shadow:
     1px 1px 1px 0px inset #000,
     2px 2px 1px 0px inset #0006,
     4px 4px 1px 0px inset #0006,
-    6px 6px 1px 0px inset #0002,
     -1px -1px 1px 0px inset #0006,
     -2px -2px 1px 0px inset #0006,
     -4px -4px 1px 0px inset #0006;
@@ -85,7 +109,6 @@
     position: absolute;
     top:0;
     min-height: 100vh;
-    // border:2px solid red;
     min-width: 100vw;
     box-sizing: border-box;
     background-color: #000d;
@@ -124,18 +147,23 @@
 }
 
 #anim{
-    background:unset;
-    // background-color:var(--thema-medium);
+    // background:unset;
     border:unset;
-    width:48px;
-    height: 48px;
-    background-image: url('../assets/icons/icon-switch.svg');
+    // width:48px;
+    // height: 48px;
+    // background-image: url('../assets/icons/icon-switch.svg');
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
     cursor:pointer;
     transition:0.5s;
+}
+
+
+button#artwork{
+    background-color: #f468;
+    // background-color: var(--thema-green);
     &:hover{
-        // background-image: url('../assets/icons/icon-switch-hover.svg');
+        // background-color: var(--thema-lightest)!important;
     }
 }

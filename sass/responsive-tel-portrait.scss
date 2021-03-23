@@ -1,283 +1,112 @@
-@media (max-width: 750px) and (orientation: portrait) {
+@media screen and (max-width: 1000px) {
     .myBody{
         // visibility: hidden!important;
     }
-    .menu-icon{
-        min-height: 100vh;
-        // animation: none;
-    }
-    .navbar{
-        height:6vh;
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
-    .navbar .menu-icon{
-        margin:auto -636px auto auto;
+    nav, #main, footer{
+        display: none!important;
     }
 
-    .navbar .menu-icon #burger-icon{
-        width:38px;
-        height:38px;
-    }
-    .burgerToggled:hover{
-        background-image:url('../assets/icons/svg-burger.svg')!important;
-    }
-
-    .jumbo-frame h1,.jumbo-frame h2{
-        display: none;
-    }
-    .panneauGauche, .panneauCentre{
-        display: flex;
-        flex-basis: 100%!important;
-        width: 100vw;
-    }
-    #main section:first-child .panneauGauche{
-        flex-direction: initial;
-        height: 8vh;
-    }
-    #main section:first-child .panneauDroit .switch-frame{
-        margin:unset;
-    }
-
-    #main section:first-child .panneauGauche .jumbo-frame .option-panel{
-        padding:unset;
-    }
-
-    #main section:first-child{
-        // height: initial;
-        flex-wrap: wrap;
-        background:unset;
-        background-color:var(--thema-darkest);
-    }
-
-    #main section:first-child .panneauGauche .jumbo-frame{
-        .option-panel{
-            margin:auto;
-            display: flex;
-            #anim{
-                margin:auto;
-            }
-        }   
-    }
-
-    #circleShow{
-        height: 48vh!important;
-    }
-    .smallCircle, .bigCircle{
-        width:120px!important;
-        height:120px;
-    }
-
-
-
-    .section-legend .zoneLegend{
-        width:80vw;
-        p{
-            font-size:0.8rem;
-            letter-spacing: 0.04rem;
-        }
-    }
-    .bigCircle{
-        margin: auto auto 8rem!important;
-    }
-    .smallCircle{
-        margin: 8rem auto auto!important;
-    }
-    .right-panel{
-        margin-left:-1.8rem!important;
-    }
-    .left-panel{
-        margin-right:-1.8rem!important;
-    }
-    .panneauCentre h3{
-        margin-block-start: 0em;
-        margin-block-end: 1rem;
-        font-size:1rem!important;
-    }
-
-    .centerFrame {
-        height: 48px;
-    }
-
-    .dotRow .dotFrame {
-        margin: auto 0.5rem;
-    }
-
-    #main section:first-child .panneauDroit .switch-frame{
-//
-    }
-
-    #main section:first-child .panneauGauche .jumbo-frame{
-        display: flex;
-        margin: auto;
-        flex-basis: 50%;
-        height: -webkit-fill-available;
+    .section-responsive{
+        // height:100vh;
         // border:1px solid red;
     }
-    
-    #main section:first-child .panneauDroit{
-        justify-content: center;
-        // border:1px solid yellow;
-        flex-basis: 50%;
-        .switch-frame{
-            max-height: initial;
-        }
-    }
-    #main section:first-child .panneauCentre{
-        height:50%;
-    }
 
-
-    #main section:first-child{
-        min-height: 16vh;
-        height: 16vh;
-    }
-
-    #main #circleShow{
-        margin-top: unset;
-    }
-
-    .paragraphe{
-
-    }
-    .encadre{
-        background-image: url(../assets/elements/legend-strip-2.svg);
-        opacity: 0.8;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-blend-mode: color-burn;
-        background-color: #04c4ff16;
-    }
-    .cadreTestimonial{
-        flex-wrap:wrap;
-        max-width: 100vw;
-        width: 100vw!important;
+    .sousDiv{
         display: flex;
-        justify-content: center;
-        height: 58vh;
-    }
-    .cadreTestimonial .encadre {
-        margin: 0.6rem auto auto ;
-        flex-basis: 40%;
-        padding: 0;
-        height: 24vh;
-        .paragraphe{
-            height: 70%;
-            background:unset!important;
-            font-size:0.50rem!important;
-            padding:0.18rem!important;
-        }
-        .auteur{
-            height: 14%;
-        }
-    }
-    .cadreTestimonial .encadre:first-child{
-        // flex-basis: 52%;
-    }
-
-    .auteur{
-        font-size:0.96rem!important;
-    }
-
-
-    // page contact
-
-    .block-center{
-        min-height: 94vh;
-        max-height: 94vh;
-        height: 94vh;
-        display: flex;
-        max-width: 100vw;
-        flex-wrap: wrap;
-        .panneau-centre{
-            flex-basis: 100%!important;
-            width: 100vw!important;
-            height: 64vh;
-        }
-        .panneau-droit, .panneau-gauche{
-            height: 30vh;
-            .carreGris{
-                height: 15vh;
-                border-radius:unset;
-            }
-        }
-
-    }
-
-    .cadre-top, .cadre-bottom{
-        display: none;
-    }
-
-    .block-center .panneau-gauche, .block-center .panneau-droit{
-        // display: none;
-    }
-
-    .carreGris{
-        width: 50vw;
-        height:auto;
-        .cercleContact{
-            width:80px;
-            height:80px;
-        }
-    }
-
-    .section-formulaire h3{
-        text-indent: 1.64rem;
-        font-size:smaller;
-    }
-
-    .socle, .modeContact{
-        background-size: 56%;
-    }
-
-    .section-formulaire{
-        height:64vh;
-    }
-
-    .boutonSubmit{
-        margin:1rem auto 0rem;
-        width: -webkit-fill-available;
-    }
-    #special-input{
+        height: 100vh;
         flex-direction: column;
     }
 
-    .block-center-2{
-        display: none;
-    }
-
-    #notation{
-        flex-basis:18%;
-    }
-    #pseudo{
-        flex-basis:80%;
-        margin-right:2%;
-    }
-
-    .cadreConteneur{
-        width: 100vw!important;
-        .divContenu{
-            width: 96%!important;
-            height: 100%;
-            .bgBobines{
-                background-size:96%;
-                background-color:#04c4ff96;
-                animation: none;
-                height: 100%;
-            }
-            .bgBobines .pageGauche{
-                margin: 34% 0% 34% 0.25%;
-            }
-            .bgBobines .pageDroite{
-                margin:34% 0.25% 34% 0%;
-                .zoneTitre{
-                    font-size:0.74rem;
-                    text-align: center;
-                }
-                .zoneLegend .legend{
-                    font-size:0.58rem;
-                }
-            }
+    .sousSection{
+        height:50vh;
+        width: 100vw;
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: var(--thema-darkest);
+        margin: auto;
+        display: flex;
+        .myH1, .myH2{
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+        .myH1{
+            margin:auto auto 1rem;
+            color:var(--thema-lightest);
+            font-size: 1.4rem;
+            letter-spacing: 0.16rem;
+            font-family: var(--dm-sans);
+        }
+        .myH2{
+            margin: 1rem auto auto;
+            font-family: var(--font-bubbleGum);
+            font-size: 0.90rem;
+            letter-spacing: 0.1rem;
+            color:var(--thema-green);
         }
     }
+
+    #section-0 .sousSection:first-child{
+        background-image: url('../assets/responsive/bg-circle.svg'),linear-gradient(180deg, var(--thema-dark),var(--thema-darkest));
+    }
+    .sousSection + .sousSection{
+        // border:2px solid blue;
+    }
+
+    .divOpen{
+        width:64%;
+        height:72%;
+        border:3px solid var(--thema-medium);
+        border-radius:20px;
+        margin: auto;
+        display: flex;
+    }
+
+    .bg-circle{
+        background-image: url('../assets/responsive/big-circle-2.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;    
+    }
+
+    .paraTemp{
+        color:#fffa;
+        justify-content: center;
+        margin:auto;
+        align-self: center;
+        text-align: center;
+    }
+
+    .reveal [class*="reveal-"]{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    
+    .reveal-visible [class*="reveal-"]{
+        opacity: 1;
+        transition:1s cubic-bezier(0.54,0,0,1);
+        // transition:0.5s linear;
+        // transition-property: transform;
+        transform: translateY(0px);
+    }
+    .reveal-visible .reveal-2{
+        transition-delay: 1s;
+    }
+    .reveal-visible .reveal-3{
+        transition-delay: 1.2s!important;
+    }
+    .reveal-visible .reveal-4{
+        transition-delay: 1.4s!important;
+    }
+    
+    
+    @media (prefers-reduced-motion: reduce) {
+        .reveal [class*="reveal-"]{
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
 }

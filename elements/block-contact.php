@@ -1,120 +1,92 @@
 <?php 
-    // connexion bdd
-    // $bdd = new PDO('mysql:host=db5001841472.hosting-data.io;dbname=dbs1514150;charset=utf8','dbu253495','!a8tAm9Rx792A8CD%');
-    try
-    {
-        // $bdd = new PDO('mysql:host=127.0.0.1;dbname=leviatf42;charset=utf8','root','root');    
-        $bdd = new PDO('mysql:host=leviatf42.mysql.db;dbname=leviatf42;charset=utf8','leviatf42','cGma7HtzkMND');    
-    }
-    catch (Exception $e)
-    {
-            die('Erreur : ' . $e->getMessage());
-    }
 
-?>
-<?php
-if(isset($_POST["pseudo"])){
-    $msgError = "ok";
-    if(!empty($_POST['pseudo'])&& !empty($_POST['commentaire'])&& !empty($_POST['notation'])){
-        $msgError = "donnees ok";
-        $pseudo = htmlspecialchars($_POST['pseudo']);
-        $commentaire = htmlspecialchars($_POST['commentaire']);
-        $notation = htmlspecialchars($_POST['notation']);
-        
-        if((strlen($pseudo)>0)&&(strlen($pseudo)<20)){
-            $msgError = "ok";
-            if((strlen($commentaire)>0)&&(strlen($commentaire)<1000)){
+require ('./php/connexion-bdd.php');
+include ('./php/functions.php');
+
+$errors = [];
+$imageUrl = null;
+
+if ( $_SERVER['REQUEST_METHOD'] === 'POST'){
+    $returnValidation = validateForm();
+    $errors = $returnValidation['errors'];
     
-                $req1 = $bdd->prepare('INSERT INTO commentaires (pseudo, commentaire, notation,dateEnvoi) VALUES (?,?,?,NOW())');
-                $req1->execute(array($pseudo,$commentaire,$notation));  
-                $msgError = "<span style='color:#4c8'>ton commentaire a bien été publié</span>";
-            }
-            else{
-                $msgError = "ton message est trop long!";
-            }
-        }
-        else{
-            $msgError = "ton pseudo est trop long!";
-        }
-    }
-    else{
-        $msgError = "champs non remplis";
+    if(count ($errors) === 0){
+        addCommentaire($bdd);
+        // die();
+        // Redirection du visiteur vers la page d'accueil
+        // header('Location: contact-me.php');
     }
 }
-else{
-    $msgError = "";
-}
+
 ?>
 
-
-
-<div class="cadre-top"></div>
+<!-- <div class="cadre-top"></div> -->
 
 <div class="block-center">
 
-    <div class="panneau-gauche">
-        <div class="carreGris">
-            <div class="cercleContact">
-                <div class="modeContact">
-                    <a href="https://www.linkedin.com/in/tarik-louatah-7983481b3/" target="_blank"><button class="buttonLinkedin"></button></a>
-                </div>
-                <div class="socle"></div>
-            </div>
-        </div>
-        <div class="carreGris">
-            <div class="cercleContact">
-                <div class="modeContact">
-                    <a href="mailto:tarik.louatah@gmail.com"><button class="buttonMail"></button></a>
-                </div>
-            <div class="socle"></div>
-        </div>
-        </div>
-    </div>
+
 
     <div class="panneau-centre">
-        <div class="section-formulaire">
-            <h3>commentaires</h3>
-            <form class="formulaire-tarik" action="" method="POST">
+        <div class="section-formulaire darkNeon">
+            <h3>aidez-moi à améliorer ce site</h3>
+            <form class="formulaire-tarik" enctype="multipart/form-data" action="" method="POST">
                 <div class="section-input">
-                    <input id="pseudo" type="text" name="pseudo" placeholder="renseigne un pseudo">
-                    <input id="notation" type="number" min="0" max="5" name="notation" placeholder="note">
+                    <label for="pseudo">indiquez un pseudo</label>
+                    <input id="pseudo" type="text" name="pseudo" placeholder="">
+                </div>
+                <div class="section-input">
+                    <label for="notation">notation</label>
+                    <input id="notation" type="number" min="0" max="5" name="notation" placeholder="">
+                </div>
+                <div class="section-input">
+                    <label for="reponse1">Quel feature avez-vous le plus apprécié ?</label>
+                    <select name="reponse1" id="reponse1">
+                        <option value="diaporamas">les slideshow</option>
+                        <option value="drag&drop">le quizz drag & drop</option>
+                        <option value="section3d">l'espace 3d</option>
+                    </select>
+                </div>
+                <div class="section-input">
+                    <label for="reponse2">Quelle domaine mériterait d'être amélioré ?</label>
+                    <select name="reponse2" id="reponse2">
+                        <option value="graphisme">revoie ta maquette et tes graphismes !</option>
+                        <option value="fonctionnaliteFront">revoie tes fonctionnalités front !</option>
+                        <option value="structure">revoie la structure de ton site</option>
+                        <option value="database">revoie ta base de données :)</option>
+                        <option value="toutRefaire">rien ne va !</option>
+                        <option value="goodJob">c'est plutot pas mal</option>
+                    </select>
                 </div>
                 <div id="special-input" class="section-input">
-                    <textarea name="commentaire" cols="30" rows="4" placeholder="saisis ton commentaire ici !"></textarea>
+                    <textarea name="commentaire" cols="30" rows="4" placeholder="saisissez votre message ici !"></textarea>
                     <input class="boutonSubmit boutonTk darkNeon" type="submit" value="valider">
                 </div>
-                <div class="section-input">
-                    <p style="color:red"><?php if(isset($msgError)){echo $msgError;}?></p>
+                
+                <!-- <div class="section-input"> -->
+                    <!-- <label for='image'>photo</label> -->
+                    <!-- <input type="file" name="image">
+                </div> -->
+
+
+                <div class="section-error">
+                    <?php
+                    if(count($errors) != 0){
+                        foreach ($errors as $error){
+                            echo('<p class="error">'.$error.'</p>');
+                        }
+                    }
+                    if ( $_SERVER['REQUEST_METHOD'] === 'POST'){
+                        if(count ($errors) === 0){
+                            echo("<p class='valid'>votre commentaire a bien été posté, merci pour votre feedback !</p>");
+                        }
+                    }
+                    ?>
                 </div>
             </form>
 
-            <div class="section-display" style="color:white">
-                <?php 
-                $req = $bdd->query("SELECT * FROM commentaires ORDER BY dateEnvoi DESC");
-                // lister les commentaires
-                ?>
-                <table class="tableauCommentaire">
-                <?php
-                while ($donnees = $req->fetch())
-                {
-                ?>
-                    <tr>
-                        <td><?php echo $donnees['pseudo'];?></td>
-                        <td><?php echo $donnees['dateEnvoi'];?></td>
-                        <td id="tdNotation"><?php switchNote($donnees); ?></td>
-                    </tr>
-                    <tr>
-                        <td id="commentaire" colspan="3"><?php echo $donnees['commentaire'];?></td>
-                    </tr>
-                <?php
-                }
-                $req->closeCursor();   
-                ?>
-                </table>
-            </div>
         </div>
     </div>
-    <div class="panneau-droit">
+    <div class="panneau-droit darkNeon">
         <div class="carreGris">
             <div class="cercleContact">
                 <div class="modeContact">
@@ -131,34 +103,26 @@ else{
                 <div class="socle"></div>
             </div>
         </div>
+        <div class="carreGris">
+            <div class="cercleContact">
+                <div class="modeContact">
+                    <a href="https://www.linkedin.com/in/tarik-louatah-7983481b3/" target="_blank"><button class="buttonLinkedin"></button></a>
+                </div>
+                <div class="socle"></div>
+            </div>
+        </div>
+        <div class="carreGris">
+            <div class="cercleContact">
+                <div class="modeContact">
+                    <a href="mailto:tarik.louatah@gmail.com"><button class="buttonMail"></button></a>
+                </div>
+            <div class="socle"></div>
+        </div>
     </div>
-
 </div>
-<div class="cadre-bottom">
+<!-- <div class="cadre-bottom"> -->
     <?php 
     require('elements/copyright.php');
     ?>
-</div>
-<?php
-    function switchNote($data){
-        if($data['notation'] == 1){
-            echo "⭐";
-        }
-        elseif($data['notation']==2){
-            echo "⭐⭐";
-        }
-        elseif($data['notation']==3){
-            echo "⭐⭐⭐";
-        }
-        elseif($data['notation']==4){
-            echo "⭐⭐⭐⭐";
-        }
-        elseif($data['notation']==5){
-            echo "⭐⭐⭐⭐⭐";
-        }
-        else{
-            echo "0";
-        }
-    }
-?>
+<!-- </div> -->
 
